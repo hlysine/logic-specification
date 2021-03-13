@@ -4,6 +4,13 @@
     "description": "Syntax highlighting for logic specification",
     "publisher": "Henry-YSLin",
     "version": "0.0.1",
+    "bugs": {
+        "url": "https://github.com/Henry-YSLin/logic-specification/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Henry-YSLin/logic-specification.git"
+    },
     "engines": {
         "vscode": "^1.54.0"
     },

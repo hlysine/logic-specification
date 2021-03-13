@@ -1,4 +1,4 @@
-# logic-specification README
+# logic-specification
 
 Syntax highlighting for Logic Specification.
 
