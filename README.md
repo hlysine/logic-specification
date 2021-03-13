@@ -4,6 +4,6 @@ Syntax highlighting for Logic Specification.
 
 ## Release Notes
 
-### 1.0.0
+### 0.0.1
 
 Initial release - very basic syntax highlighting
