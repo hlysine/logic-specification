@@ -1,0 +1,26 @@
+{
+    "name": "logic-specification",
+    "displayName": "Logic Specification",
+    "description": "Syntax highlighting for logic specification",
+    "publisher": "Henry-YSLin",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.54.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "logicspec",
+            "aliases": ["Logic Specification", "logicspec"],
+            "extensions": [".logic"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "logicspec",
+            "scopeName": "source.logicspec",
+            "path": "./syntaxes/logicspec.tmLanguage.json"
+        }]
+    }
+}

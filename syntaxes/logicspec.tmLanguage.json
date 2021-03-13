@@ -1,0 +1,68 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Logic Specification",
+	"patterns": [
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#predicates"
+		},
+		{
+			"include": "#numbers"
+		}
+	],
+	"repository": {
+		"strings": {
+			"name": "string.quoted.double.logicspec",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.logicspec",
+					"match": "\\\\."
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.logicspec",
+				"match": "\\b(exists|implies|for all)\\b"
+			}]
+		},
+		"numbers": {
+			"patterns": [{
+				"name": "constant.numeric.logicspec",
+				"match": "\\b[0-9]+"
+			}]
+		},
+		"operators": {
+			"patterns": [{
+				"name": "keyword.operator.logicspec",
+				"match": "\\b(and|or)\\b|\\+|-|\\*|/|\\^"
+			}]
+		},
+		"comments": {
+			"patterns": [{
+				"name": "comment.line.number-sign.logicspec",
+				"match": "#.*$"
+			}]
+		},
+		"predicates": {
+			"patterns": [{
+				"name": "entity.name.function.logicspec",
+				"match": "\\b[a-zA-Z_]\\w*(?<!_)(?=\\()"
+			}]
+		}
+	},
+	"scopeName": "source.logicspec"
+}
