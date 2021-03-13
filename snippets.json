@@ -1,0 +1,22 @@
+{
+	"for all": {
+		"prefix": "for",
+		"body": [
+			"for all ${1:x} (",
+			"  $2",
+			") implies (",
+			"  $0",
+			")"
+		]
+	},
+	"exists": {
+		"prefix": "exists",
+		"body": [
+			"exists ${1:x} (",
+			"  $2",
+			") implies (",
+			"  $0",
+			")"
+		]
+	}
+}

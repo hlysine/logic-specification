@@ -1,8 +1,12 @@
 # logic-specification
 
-Syntax highlighting for Logic Specification.
+Syntax highlighting and snippets for Logic Specification.
 
 ## Release Notes
+
+### 0.0.2
+
+Added 2 snippets
 
 ### 0.0.1
 
