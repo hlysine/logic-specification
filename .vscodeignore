@@ -5,11 +5,7 @@ vsc-extension-quickstart.md
 test/**
 .yarnrc
 **/jsconfig.json
+**/tsconfig.json
 **/*.map
 **/.eslintrc.json
-.vscode/**
-.vscode-test/**
-out/**
-src/**
-**/tsconfig.json
 **/*.ts
