@@ -3,7 +3,7 @@
   "displayName": "Logic Specification",
   "description": "Language support for logic specification",
   "publisher": "Henry-YSLin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "bugs": {
     "url": "https://github.com/Henry-YSLin/logic-specification/issues"
   },

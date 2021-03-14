@@ -10,17 +10,24 @@ predicate
 
 logical_expression
   : logical_expression LOGICAL_OPERATOR logical_expression
-  | arithmetic_expression (RELATIONAL_OPERATOR arithmetic_expression)+
-  | arithmetic_expression RELATIONAL_OPERATOR STRING_LITERAL
-  | STRING_LITERAL RELATIONAL_OPERATOR arithmetic_expression
+  | string_or_arithmetic_expression (RELATIONAL_OPERATOR string_or_arithmetic_expression)+
+  | UNARY_LOGICAL_OPERATOR logical_expression
+  | LOGICAL_CONSTANT
   | '(' logical_expression ')'
   | predicate_call
   | for_all_block
   | exists_block
   ;
 
+string_or_arithmetic_expression
+  : arithmetic_expression
+  | STRING_LITERAL
+  ;
+
 arithmetic_expression
   : arithmetic_expression ARITHMETIC_OPERATOR arithmetic_expression
+  | arithmetic_expression UNARY_BINARY_ARITHMETIC_OPERATOR arithmetic_expression
+  | UNARY_BINARY_ARITHMETIC_OPERATOR arithmetic_expression
   | INT identifier // should implicit multiplication be allowed?
   | INT bracketed_arithmetic_expression // should implicit multiplication be allowed?
   | bracketed_arithmetic_expression
@@ -53,7 +60,7 @@ exists_block
   ;
 
 identifier_list
-  : identifier (',' identifier)*
+  : (identifier (',' identifier)*)?
   ;
 
 identifier
@@ -90,6 +97,15 @@ DIGIT
   : [0-9]
   ;
 
+UNARY_LOGICAL_OPERATOR
+  : 'not'
+  ;
+
+LOGICAL_CONSTANT
+  : 'true'
+  | 'false'
+  ;
+
 LOGICAL_OPERATOR
   : 'and'
   | 'or'
@@ -104,10 +120,13 @@ RELATIONAL_OPERATOR
   | '>'
   ;
 
-ARITHMETIC_OPERATOR
+UNARY_BINARY_ARITHMETIC_OPERATOR
   : '+'
   | '-'
-  | '*'
+  ;
+
+ARITHMETIC_OPERATOR
+  : '*'
   | '/'
   | '^'
   ;

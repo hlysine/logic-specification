@@ -66,7 +66,15 @@ var logicspecListener = /*#__PURE__*/function (_antlr4$tree$ParseTre) {
 
   }, {
     key: "exitLogical_expression",
-    value: function exitLogical_expression(ctx) {} // Enter a parse tree produced by logicspecParser#arithmetic_expression.
+    value: function exitLogical_expression(ctx) {} // Enter a parse tree produced by logicspecParser#string_or_arithmetic_expression.
+
+  }, {
+    key: "enterString_or_arithmetic_expression",
+    value: function enterString_or_arithmetic_expression(ctx) {} // Exit a parse tree produced by logicspecParser#string_or_arithmetic_expression.
+
+  }, {
+    key: "exitString_or_arithmetic_expression",
+    value: function exitString_or_arithmetic_expression(ctx) {} // Enter a parse tree produced by logicspecParser#arithmetic_expression.
 
   }, {
     key: "enterArithmetic_expression",

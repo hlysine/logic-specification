@@ -1,5 +1,12 @@
 # Change Log
 
+## 0.1.2
+
+- Added support for unary operators
+- Allow empty parameter lists
+- Added support for single-quoted strings in syntax highlighting
+- Added README
+
 ## 0.1.1
 
 - Allow indexed accessors in identifier lists
