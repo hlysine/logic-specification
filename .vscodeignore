@@ -11,3 +11,4 @@ test/**
 **/*.ts
 input.logic
 .antlr
+*.vsix
