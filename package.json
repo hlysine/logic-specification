@@ -2,7 +2,7 @@
   "name": "logic-specification",
   "displayName": "Logic Specification",
   "description": "Language support for logic specification",
-  "publisher": "Henry-YSLin",
+  "publisher": "henry-lin",
   "version": "0.1.2",
   "bugs": {
     "url": "https://github.com/Henry-YSLin/logic-specification/issues"
