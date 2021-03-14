@@ -3,8 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.activate = void 0;
 const vscode = require("vscode");
 const antlr4 = require("antlr4");
-const logicspecLexer = require("../src/logicspecLexer.js");
-const logicspecParser = require("../src/logicspecParser.js");
+const logicspecLexer = require("./logicspecLexer.js");
+const logicspecParser = require("./logicspecParser.js");
 function activate(context) {
     const collection = vscode.languages.createDiagnosticCollection("logicspec");
     if (vscode.window.activeTextEditor) {

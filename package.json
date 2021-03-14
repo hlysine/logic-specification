@@ -3,7 +3,7 @@
   "displayName": "Logic Specification",
   "description": "Language support for logic specification",
   "publisher": "Henry-YSLin",
-  "version": "0.0.3",
+  "version": "0.1.1",
   "bugs": {
     "url": "https://github.com/Henry-YSLin/logic-specification/issues"
   },
@@ -51,24 +51,34 @@
   },
   "scripts": {
     "vscode:prepublish": "yarn run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "lint": "eslint src --ext ts"
+    "grammar": "cd src/ && antlr4 -Dlanguage=JavaScript logicspec.g4",
+    "compile": "babel ./src --out-dir ./out && tsc -p ./",
+    "watch": "concurrently \"babel --watch ./src --out-dir ./out\" \"tsc -watch -p ./\"",
+    "lint": "eslint src --ext ts",
+    "package": "vsce package"
   },
   "dependencies": {
     "antlr4": "^4.9.2"
   },
   "devDependencies": {
-    "@types/vscode": "^1.54.0",
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.13.8",
+    "@babel/preset-env": "^7.13.10",
     "@types/glob": "^7.1.3",
     "@types/mocha": "^8.0.4",
     "@types/node": "^12.11.7",
-    "eslint": "^7.19.0",
+    "@types/vscode": "^1.54.0",
     "@typescript-eslint/eslint-plugin": "^4.14.1",
     "@typescript-eslint/parser": "^4.14.1",
+    "babel-plugin-add-module-exports": "^1.0.4",
+    "concurrently": "^6.0.0",
+    "eslint": "^7.19.0",
     "glob": "^7.1.6",
     "mocha": "^8.2.1",
     "typescript": "^4.1.3",
+    "vsce": "^1.87.0",
     "vscode-test": "^1.5.0"
   }
 }

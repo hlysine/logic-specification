@@ -9,3 +9,5 @@ test/**
 **/*.map
 **/.eslintrc.json
 **/*.ts
+input.logic
+.antlr

@@ -1,6 +1,10 @@
 # Change Log
 
-## 0.0.3
+## 0.1.1
+
+- Allow indexed accessors in identifier lists
+
+## 0.1.0
 
 - Added syntax checking
 

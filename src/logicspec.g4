@@ -1,7 +1,7 @@
 grammar logicspec;
 
 file
-  : predicate*
+  : predicate* EOF
   ;
 
 predicate
@@ -21,12 +21,11 @@ logical_expression
 
 arithmetic_expression
   : arithmetic_expression ARITHMETIC_OPERATOR arithmetic_expression
-  | INT IDENTIFIER // should implicit multiplication be allowed?
+  | INT identifier // should implicit multiplication be allowed?
   | INT bracketed_arithmetic_expression // should implicit multiplication be allowed?
   | bracketed_arithmetic_expression
   | INT
-  | indexed_accessor
-  | IDENTIFIER
+  | identifier
   ;
 
 bracketed_arithmetic_expression
@@ -55,7 +54,12 @@ exists_block
   ;
 
 identifier_list
-  : IDENTIFIER (',' IDENTIFIER)*
+  : identifier (',' identifier)*
+  ;
+
+identifier
+  : indexed_accessor
+  | IDENTIFIER
   ;
 
 STRING_LITERAL

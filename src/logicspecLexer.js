@@ -1,6 +1,6 @@
 // Generated from logicspec.g4 by ANTLR 4.9.2
 // jshint ignore: start
-const antlr4 = require('antlr4');
+import antlr4 from 'antlr4';
 
 
 
@@ -119,24 +119,24 @@ const atn = new antlr4.atn.ATNDeserializer().deserialize(serializedATN);
 
 const decisionsToDFA = atn.decisionToState.map( (ds, index) => new antlr4.dfa.DFA(ds, index) );
 
-class logicspecLexer extends antlr4.Lexer {
+export default class logicspecLexer extends antlr4.Lexer {
 
     static grammarFileName = "logicspec.g4";
     static channelNames = [ "DEFAULT_TOKEN_CHANNEL", "HIDDEN" ];
 	static modeNames = [ "DEFAULT_MODE" ];
-	static literalNames = [ null, "'('", "')'", "'==='", "','", "'_'", "'implies'",
+	static literalNames = [ null, "'('", "')'", "'==='", "','", "'_'", "'implies'", 
                          "'for'", "'all'", "'exists'" ];
-	static symbolicNames = [ null, null, null, null, null, null, null, null,
-                          null, null, "STRING_LITERAL", "DOUBLE_QUOTED_STRING_LITERAL",
-                          "UNTERMINATED_DOUBLE_QUOTED_STRING_LITERAL", "SINGLE_QUOTED_STRING_LITERAL",
-                          "UNTERMINATED_SINGLE_QUOTED_STRING_LITERAL", "INT",
-                          "DIGIT", "LOGICAL_OPERATOR", "RELATIONAL_OPERATOR",
+	static symbolicNames = [ null, null, null, null, null, null, null, null, 
+                          null, null, "STRING_LITERAL", "DOUBLE_QUOTED_STRING_LITERAL", 
+                          "UNTERMINATED_DOUBLE_QUOTED_STRING_LITERAL", "SINGLE_QUOTED_STRING_LITERAL", 
+                          "UNTERMINATED_SINGLE_QUOTED_STRING_LITERAL", "INT", 
+                          "DIGIT", "LOGICAL_OPERATOR", "RELATIONAL_OPERATOR", 
                           "ARITHMETIC_OPERATOR", "IDENTIFIER", "WS", "LINE_COMMENT" ];
-	static ruleNames = [ "T__0", "T__1", "T__2", "T__3", "T__4", "T__5", "T__6",
-                      "T__7", "T__8", "STRING_LITERAL", "DOUBLE_QUOTED_STRING_LITERAL",
-                      "UNTERMINATED_DOUBLE_QUOTED_STRING_LITERAL", "SINGLE_QUOTED_STRING_LITERAL",
-                      "UNTERMINATED_SINGLE_QUOTED_STRING_LITERAL", "INT",
-                      "DIGIT", "LOGICAL_OPERATOR", "RELATIONAL_OPERATOR",
+	static ruleNames = [ "T__0", "T__1", "T__2", "T__3", "T__4", "T__5", "T__6", 
+                      "T__7", "T__8", "STRING_LITERAL", "DOUBLE_QUOTED_STRING_LITERAL", 
+                      "UNTERMINATED_DOUBLE_QUOTED_STRING_LITERAL", "SINGLE_QUOTED_STRING_LITERAL", 
+                      "UNTERMINATED_SINGLE_QUOTED_STRING_LITERAL", "INT", 
+                      "DIGIT", "LOGICAL_OPERATOR", "RELATIONAL_OPERATOR", 
                       "ARITHMETIC_OPERATOR", "IDENTIFIER", "WS", "LINE_COMMENT" ];
 
     constructor(input) {
@@ -148,7 +148,7 @@ class logicspecLexer extends antlr4.Lexer {
         return atn;
     }
 }
-module.exports = logicspecLexer;
+
 logicspecLexer.EOF = antlr4.Token.EOF;
 logicspecLexer.T__0 = 1;
 logicspecLexer.T__1 = 2;
@@ -172,3 +172,6 @@ logicspecLexer.ARITHMETIC_OPERATOR = 19;
 logicspecLexer.IDENTIFIER = 20;
 logicspecLexer.WS = 21;
 logicspecLexer.LINE_COMMENT = 22;
+
+
+

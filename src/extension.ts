@@ -2,8 +2,8 @@
 import * as vscode from "vscode";
 import * as path from "path";
 const antlr4 = require("antlr4");
-const logicspecLexer = require("../src/logicspecLexer.js");
-const logicspecParser = require("../src/logicspecParser.js");
+const logicspecLexer = require("./logicspecLexer.js");
+const logicspecParser = require("./logicspecParser.js");
 
 export function activate(context) {
   const collection = vscode.languages.createDiagnosticCollection("logicspec");

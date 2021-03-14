@@ -1,2 +1,4 @@
 node_modules
 *.vsix
+input.logic
+.antlr
