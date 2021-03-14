@@ -48,7 +48,6 @@ for_all_block
   : 'for' 'all' identifier_list ('(' logical_expression ')')? implies_block
   ;
 
-
 exists_block
   : 'exists' identifier_list ('(' logical_expression ')')? implies_block
   ;
