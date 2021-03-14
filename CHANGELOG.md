@@ -1,9 +1,13 @@
 # Change Log
 
-All notable changes to the "logic-specification" extension will be documented in this file.
+## 0.0.3
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+- Added syntax checking
 
-## [Unreleased]
+## 0.0.2
 
-- Initial release
+- Added 2 snippets
+
+## 0.0.1
+
+- Initial release - very basic syntax highlighting

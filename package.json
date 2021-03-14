@@ -1,37 +1,74 @@
 {
-    "name": "logic-specification",
-    "displayName": "Logic Specification",
-    "description": "Syntax highlighting for logic specification",
-    "publisher": "Henry-YSLin",
-    "version": "0.0.2",
-    "bugs": {
-        "url": "https://github.com/Henry-YSLin/logic-specification/issues"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Henry-YSLin/logic-specification.git"
-    },
-    "engines": {
-        "vscode": "^1.54.0"
-    },
-    "categories": [
-        "Programming Languages"
+  "name": "logic-specification",
+  "displayName": "Logic Specification",
+  "description": "Language support for logic specification",
+  "publisher": "Henry-YSLin",
+  "version": "0.0.3",
+  "bugs": {
+    "url": "https://github.com/Henry-YSLin/logic-specification/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Henry-YSLin/logic-specification.git"
+  },
+  "engines": {
+    "vscode": "^1.54.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "*"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "logicspec",
+        "aliases": [
+          "Logic Specification",
+          "logicspec"
+        ],
+        "extensions": [
+          ".logic"
+        ],
+        "configuration": "./language-configuration.json"
+      }
     ],
-    "contributes": {
-        "languages": [{
-            "id": "logicspec",
-            "aliases": ["Logic Specification", "logicspec"],
-            "extensions": [".logic"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "logicspec",
-            "scopeName": "source.logicspec",
-            "path": "./syntaxes/logicspec.tmLanguage.json"
-        }],
-        "snippets": [{
-            "language": "logicspec",
-            "path": "./snippets.json"
-        }]
-    }
+    "grammars": [
+      {
+        "language": "logicspec",
+        "scopeName": "source.logicspec",
+        "path": "./syntaxes/logicspec.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "logicspec",
+        "path": "./snippets.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts"
+  },
+  "dependencies": {
+    "antlr4": "^4.9.2"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.54.0",
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.0.4",
+    "@types/node": "^12.11.7",
+    "eslint": "^7.19.0",
+    "@typescript-eslint/eslint-plugin": "^4.14.1",
+    "@typescript-eslint/parser": "^4.14.1",
+    "glob": "^7.1.6",
+    "mocha": "^8.2.1",
+    "typescript": "^4.1.3",
+    "vscode-test": "^1.5.0"
+  }
 }
